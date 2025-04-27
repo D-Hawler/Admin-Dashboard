@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+}
+
+
+header {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    padding: 15px;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    grid-row: 1 / 3;
+
+    background-color: rgb(33, 150, 243);
+}
+main {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+
+    background-color: rgb(207, 211, 218);
+}
+
+.headerSigment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accountArea {
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.accountImg {
+    width: 74px;
+    height: 74px;
+}
+.accountArea span {
+    font-size: 14px;
+}
+
+input {
+    width: 900px;
+
+    padding: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: rgb(207, 211, 218);
+}
+
+button {
+    font-size: 18px;
+
+    background-color: rgb(33, 150, 243);
+
+    border: none;
+    border-radius: 40px;
+
+    padding: 10px 40px;
+    margin: 0 10px;
+}
+button > a {
+    color: rgb(255, 255, 255);
+}
+
+.sticky > h1, section > h1 {
+    padding: 30px 15px 0 15px;
+}
+
+.cardSpace {
+    padding: 15px 15px;
+
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+    border-left: 15px solid rgb(255, 193, 7);
+    padding: 24px 16px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+.card > *:last-child {
+    margin-top: auto;
+}
+.interactionMenu {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+}
+
+p {
+    font-size: 18px;
+    color: rgb(100, 100, 100);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sticky {
+    max-height: 100vh;
+
+    position: sticky;
+    top: 172px;
+}
+
+.sideCardArea {
+    padding: 20px;
+    margin: 15px;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.sideCard {
+    border-bottom: 2px solid rgb(100, 100, 100);
+    padding-bottom: 20px;
+}
+.sideCard > p {
+    font-size: 18px;
+}
+
+.trendingCard {
+    display: flex;
+}
+
+img {
+    width: 54px;
+    height: 54px;
+
+    grid-row: 1 / 3;
+}
