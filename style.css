@@ -16,15 +16,21 @@ body {
 }
 
 
-header {
+#main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    z-index: 10;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    position: sticky;
-    top: 0px;
+}
+#header-placeholder {
+    height: 100%;
 
     grid-column: 2 / 3;
 }
+
 nav {
     grid-row: 1 / 3;
 

@@ -52,3 +52,17 @@ for (i = 0; i < 41; i++) {
     interactionButton3.appendChild(button3);
     interactionMenu.appendChild(interactionButton3);
 };
+
+
+const header = document.getElementById("main-header");
+const placeholder = document.getElementById("header-placeholder");
+
+function updatePlaceholderHeight() {
+    placeholder.style.height = `${header.offsetHeight}px`;
+
+    header.style.height = `${placeholder.offsetHeight}px`;
+    header.style.width = `${placeholder.offsetWidth}px`;
+}
+
+window.addEventListener("load", updatePlaceholderHeight);
+window.addEventListener("resize", updatePlaceholderHeight);
