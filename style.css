@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",   "Segoe UI Symbol";
     /* border: 1px solid red; */
 }
 
@@ -19,13 +20,10 @@ header {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    padding: 15px;
-
     position: sticky;
-    top: 0;
+    top: 0px;
 
-    display: flex;
-    flex-direction: column;
+    grid-column: 2 / 3;
 }
 nav {
     grid-row: 1 / 3;
@@ -39,6 +37,13 @@ main {
     background-color: rgb(207, 211, 218);
 }
 
+.headerMenu {
+    padding: 15px;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
 .headerSigment {
     display: flex;
     justify-content: space-between;
@@ -84,16 +89,62 @@ button > a {
     color: rgb(255, 255, 255);
 }
 
-.sticky > h1, section > h1 {
+section > h1 {
     padding: 30px 15px 0 15px;
 }
+.sticky > h1 {
+    padding: 2px 15px 0 15px;
+}
+
+nav * {
+    color: rgb(255, 255, 255);
+    fill: rgb(255, 255, 255);
+}
+nav a {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+nav svg {
+    width: 30px;
+    height: 30px;
+}
+nav div {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.navMenu {
+    position: sticky;
+    top: 0px;
+
+    padding: 20px;
+
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+}
+
+.logo a {
+    font-size: 24px;
+}
+.logo svg {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
 
 .cardSpace {
     padding: 15px 15px;
 
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .card {
@@ -103,7 +154,7 @@ button > a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 
-    height: 200px;
+    height: 250px;
 
     display: flex;
     flex-direction: column;
@@ -116,17 +167,14 @@ button > a {
     gap: 20px;
     justify-content: end;
 }
+.interactionMenu > a > img {
+    width: 24px;
+    height: 24px;
+}
 
 p {
     font-size: 18px;
     color: rgb(100, 100, 100);
-
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 svg {
@@ -137,8 +185,10 @@ svg {
 .sticky {
     max-height: 100vh;
 
+    padding-right: 40px;
+
     position: sticky;
-    top: 172px;
+    top: 202px;
 }
 
 .sideCardArea {
@@ -160,20 +210,27 @@ a {
 }
 
 .sideCard {
+    font-size: 14px;
+
     border-bottom: 2px solid rgb(100, 100, 100);
     padding-bottom: 20px;
 }
-.sideCard > p {
-    font-size: 18px;
+.sideCard > a > p {
+    font-size: 14px;
+}
+.sideCard > a > h2 {
+    font-size: 16px;
 }
 
 .trendingCard {
     display: flex;
+    gap: 10px;
+}
+.trendingCard > h2 {
+    font-size: 14px;
 }
 
 img {
-    width: 54px;
-    height: 54px;
-
-    grid-row: 1 / 3;
+    width: 42px;
+    height: 42px;
 }
